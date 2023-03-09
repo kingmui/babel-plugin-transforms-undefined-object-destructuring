@@ -1,0 +1,38 @@
+{
+  "name": "babel-plugin-transforms-undefined-object-destructuring",
+  "version": "1.0.0",
+  "description": "Automatically converts the destructuring object to an empty object when the destructuring object is undefined.",
+  "keywords": [
+    "babel",
+    "plugin",
+    "undefined",
+    "object",
+    "destructuring"
+  ],
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "rm -fr ./lib && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kingmui/babel-plugin-transforms-undefined-object-destructuring.git"
+  },
+  "author": "kingmui<kingmui.dev@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@babel/traverse": "^7.21.2",
+    "@babel/types": "^7.21.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/babel__traverse": "^7.18.3",
+    "rollup": "^3.18.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "type": "module"
+}
