@@ -9,7 +9,7 @@ export default {
   input: 'src/index.ts',
   output: {
     file: 'lib/index.js',
-    format: 'es',
+    format: 'cjs',
     sourcemap: true,
   },
   plugins: [
