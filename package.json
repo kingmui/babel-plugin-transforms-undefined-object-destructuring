@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transforms-undefined-object-destructuring",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automatically converts the destructuring object to an empty object when the destructuring object is undefined.",
   "keywords": [
     "babel",

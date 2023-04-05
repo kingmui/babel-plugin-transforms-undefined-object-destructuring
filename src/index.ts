@@ -26,15 +26,21 @@ export default function({ assertVersion }: any) {
         if (!variableDeclarationHasPattern(node)) return;
 
         for (const declar of node.declarations) {
-          if (
-            t.isVariableDeclarator(declar) &&
-            t.isIdentifier(declar.init) &&
-            t.isObjectPattern(declar.id)
-          ) {
+          if (!t.isVariableDeclarator(declar) || !t.isIdentifier(declar.init)) return;
+
+          let defaultValue = '';
+          if (t.isObjectPattern(declar.id)) {
+            defaultValue = '{}';
+          }
+          if (t.isArrayPattern(declar.id)) {
+            defaultValue = '[]';
+          }
+
+          if (defaultValue) {
             declar.init = t.logicalExpression(
               '||',
               t.identifier(declar.init.name),
-              t.identifier('{}'),
+              t.identifier(defaultValue),
             );
           }
         }
